@@ -19,7 +19,7 @@
     src: url(../fonts/YesevaOne-Regular.ttf);
 }
 
-/* Créaction des variables globales de couleur */
+/* Créaction des variables globales de couleur et de police */
 :root {
     --primary-color: #1BD79E;
     --secondary-color-black: #041821;
@@ -33,12 +33,14 @@
     --font-yo: YesevaOne;
 }
 
+/* Reset de la page */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Valeur par défaut de la page */
 body {
     color: var(--secondary-color-black);
     font-family: var(--fonts-ml);
@@ -51,6 +53,30 @@ span {
     color: var(--primary-color);
 }
 
+
+p {
+    width: 95%;
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+h2 {
+    font-family: var(--font-yo);
+    width: 95%;
+    padding: 10px;
+}
+
+h1 {
+    font-family: var(--font-yo);
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* En-tête de la page */
 header {
     margin-top: 30px;
     width: 100%;
@@ -62,19 +88,13 @@ header {
     justify-content: center;
 }
 
-h1 {
-    font-family: var(--font-yo);
-    font-weight: normal;
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
 .iconliste {
     width: 30%;
     display: flex;
     justify-content: space-around;
 }
 
+/* Contenue de la page */
 main {
     margin-top: 15px;
     width: 100%;
@@ -137,21 +157,7 @@ img {
 
 }
 
-h2 {
-    font-family: var(--font-yo);
-    width: 95%;
-    padding: 10px;
-}
-
-p {
-    width: 95%;
-    padding: 10px;
-}
-
-li {
-    list-style: none;
-}
-
+/* Pied de page */
 footer {
     display: flex;
     flex-direction: column;
