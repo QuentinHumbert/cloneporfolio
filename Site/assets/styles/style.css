@@ -1,3 +1,4 @@
+/* Font Face pour l'ajout local des polices */
 @font-face {
     font-family: Montserrat-Light;
     src: url(../fonts/Montserrat-Light.ttf);
@@ -18,32 +19,40 @@
     src: url(../fonts/YesevaOne-Regular.ttf);
 }
 
-:root{
+/* Créaction des variables globales de couleur */
+:root {
     --primary-color: #1BD79E;
     --secondary-color-black: #041821;
     --secondary-color-grey: #808080;
     --secondary-color-lightgrey: #E5E5E5;
     --bg-color: #FFFFFF;
+    --fade-color: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%);
+    --fonts-ml: Montserrat-Light;
+    --fonts-mm: Montserrat-Medium;
+    --fonts-msb: Montserrat-SemiBold;
+    --font-yo: YesevaOne;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: Montserrat-Light;
+body {
+    color: var(--secondary-color-black);
+    font-family: var(--fonts-ml);
     background: var(--bg-color);
     display: flex;
     flex-direction: column;
 }
 
-span{
+span {
     color: var(--primary-color);
 }
 
-header{
+header {
+    margin-top: 30px;
     width: 100%;
     height: 15vh;
     border-bottom: solid #E5E5E5 1px;
@@ -53,20 +62,20 @@ header{
     justify-content: center;
 }
 
-h1{
-    font-family: YesevaOne;
+h1 {
+    font-family: var(--font-yo);
     font-weight: normal;
     font-size: 24px;
     margin-bottom: 15px;
 }
 
-.iconliste{
+.iconliste {
     width: 30%;
     display: flex;
     justify-content: space-around;
 }
 
-main{
+main {
     margin-top: 15px;
     width: 100%;
     display: flex;
@@ -74,61 +83,86 @@ main{
     align-items: center;
 }
 
-nav{
-    width: 100%;
+nav {
+    position: relative;
+    width: 90%;
     padding-bottom: 15px;
 }
 
-nav ul li{
-    padding: 5px;
+nav ul {
+    width: 105%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.food{
+nav ul li {
+    font-family: var(--fonts-mm);
+    padding-top: 5px;
+}
+
+.fade{
+    position: absolute;
+    background: var(--fade-color);
+    top: 0;
+    left: 90%;
+    width: 75px;
+    height: 100%;
+}
+
+.food {
     color: var(--primary-color);
     background-color: #DBFAF1;
 }
 
-ul{
+.galerie {
     width: 90%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.galerie{
-    width: 100%;
-    display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    width: 95%;
+    justify-content: space-between;
+    gap: 15px;
 }
 
-img{
-    width: 13vh;
-    height: 13vh;
+.cadreimage {
+    width: 100px;
+    height: 100px;
 }
 
-h2{
-    font-family: YesevaOne;
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+
+}
+
+h2 {
+    font-family: var(--font-yo);
     width: 95%;
     padding: 10px;
 }
 
-p{
+p {
     width: 95%;
     padding: 10px;
 }
 
-li{
+li {
     list-style: none;
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 13.5vh;
+    height: 15vh;
+    font-size: 12px;
+}
+
+h3 {
+    font-family: var(--fonts-mm);
+    margin-bottom: 10px;
 }
